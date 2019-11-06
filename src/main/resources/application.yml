@@ -1,0 +1,16 @@
+server:
+  port: 8989
+  context-path: /springbootrediscache
+spring:
+  datasource:
+    type: org.apache.commons.dbcp.BasicDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: root
+  redis:
+    cluster:
+      nodes: 192.168.95.19:7000,192.168.95.19:7001,192.168.95.19:7002,192.168.95.19:7003,192.168.95.19:7004,192.168.95.19:7005
+mybatis:
+  type-aliases-package: com.baizhi.entity
+  mapper-locations: classpath:com/baizhi/mapper/*Mapper.xml
